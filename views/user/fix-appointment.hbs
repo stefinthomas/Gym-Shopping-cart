@@ -1,0 +1,34 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col=md-6">
+                <h1 class="text-center" style="margin-top: 30px;" >Create a Schedule</h1>
+                <form action="/user/fix-appointment" method="POST" enctype="multipart/form-data">
+                
+                    <label for="">MembershipId</label>
+                    <input type="text" name="MembershipId" class="form-control" style="border-color:black" required>
+
+                    <label for="">Name</label>
+                    <input type="text" name="Name" class="form-control" style="border-color:black" required>
+
+                    <label for="">Mobile</label>
+                    <input type="tel" name="Mobile" class="form-control" style="border-color:black" pattern="[0-9]{10}" maxlength="10" required>
+
+                    <label for="">Date</label>
+                    <input type="date" name="Date" class="form-control" style="border-color:black" required>
+                    
+                   
+
+                    <label for="">Time</label>
+                    <input type="time" name="Time" class="form-control" style="border-color:black" required>
+
+                    <input type="text" name="userId" id="" value="{{user.MembershipId}}" hidden>
+
+                    
+                    <button type="submit" class="btn btn-success mt-4" >Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>

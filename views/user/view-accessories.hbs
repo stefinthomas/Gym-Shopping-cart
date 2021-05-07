@@ -1,0 +1,38 @@
+    <section>
+        <img src="https://i.postimg.cc/mgH2Pq4R/output-onlinepngtools.png" alt="" style="margin-left:480px;height:100px; width:380px;margin-top:100px" >
+        {{!-- <img src="https://i.postimg.cc/DzzyqttD/Desktop-1-5.png" alt="" style="width: 100%; height:460px;"> --}}
+        <div>  
+        {{!-- <img src="https://i.postimg.cc/G3SHZrD3/R8a1b92b1f2c8d581f6fe9e19e71d6d7e.gif" alt="" style="margin-left: 638px; width:35px; height:35px"> --}}
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+               
+                {{#each accessories}}
+
+                <div class="col-md-3 p-3">
+                    
+                    
+                    <div class="card" style="width: 13.5rem; height: 22.5rem; border-color:#D58830; padding:8px; box-shadow: 0px 0px 4px 4px #a08e7a; border:1px"  >
+                        <img class="card-img-top"
+                            src="/product-images/{{this._id}}.jpg"
+                            alt="Card image cap"
+                            style="height: 8rem">
+                        <div class="card-body">
+                            <h5 class="card-title">{{this.Name}}</h5>
+                            <p class="card-text" style="font-weight: bold; ">Rs.{{this.Price}}</p>
+                            <p class="card-text">{{this.Description}}</p>
+                            
+                            <button onclick="addToCart('{{this._id}}')" class="btn btn-info "  >Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                {{/each}}
+                
+            </div>
+        </div>
+    </section>
+
+    <script>
+        
+    </script>
